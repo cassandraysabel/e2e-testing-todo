@@ -1,3 +1,16 @@
+## For Testing
+*commands for playwright testing*
+1. npm i
+2. npm i --save-dev @types/node
+
+3. run ```npx playwright test``` to run tests
+4. to show reports, run ```npx playwright show-report```
+5. UI mode ```npx playwright test --ui```
+
+
+
+
+
 # To-Do-Web-App 
 
 <img src="https://github.com/himanshu1221/To-Do-Web-App/blob/master/Template.png" alt="Template" >
