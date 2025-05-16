@@ -1,14 +1,36 @@
-## For Testing
-*commands for playwright testing*
-1. npm i
-2. npm i --save-dev @types/node
+## To Set-up: ##
 
-3. run ```npx playwright test``` to run tests
-4. to show reports, run ```npx playwright show-report```
-5. UI mode ```npx playwright test --ui```
+1.) Clone repository
+
+2.) *in the root directory* `npm i`
+
+3.) `cd server` 
+    `npm i`
+
+4.) `cd client`
+    `npm i`
+
+5.) `cd e2e`
+    `npm i`
+
+## To Test: ##
+1.) `cd e2e`, 
+    `npx playwright test` -- to run test
+
+    `npx playwright show-report` -- to show test reports
+
+    `npx playwright test --ui` -- to show UI mode
 
 
+**Make sure client is running and db is connected before running e2e tests**
 
+p.s. 
+you might really wanna run tests on UI mode by npx playwright test --ui *(pls)*
+
+**Make sure internet is stable because some tests would fail otherwise**
+
+## Test Results as of May 16, 2025, 10:30 PM: ##
+![image](https://github.com/user-attachments/assets/20037b37-6f65-4a7c-bec7-65fd41844ec0)
 
 
 # To-Do-Web-App 
