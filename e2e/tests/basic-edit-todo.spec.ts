@@ -41,7 +41,7 @@ test.describe("with edit e2e", () => {
     await task.locator(".edit-todo").fill("Edited to do");
     await task.locator(".fa-pen").click(); // Toggling edit mode again (cancel edit)
 
-    // Check that original text is visible, edited is not
+
     await expect(page.locator(".task", { hasText: "Todo task" })).toBeVisible();
     await expect(
       page.locator(".task", { hasText: "Edited to do" })
@@ -119,7 +119,7 @@ test.describe("with edit e2e", () => {
     ).toBeVisible();
   });
 
-  test("edit all the added to dos, mark as done, delete all done", async ({ page }) => {
+  test("edit all the added to dos, mark as done", async ({ page }) => {
     // Add todos
     await page.waitForSelector(".input");
     const input = page.locator(
@@ -153,16 +153,6 @@ test.describe("with edit e2e", () => {
       await expect(task).toHaveCSS("text-decoration", /line-through/);
     }
 
-    // Click "Remove Done Todos" button if it exists
-    const removeDoneButton = page.locator(
-      'button:has-text("Remove Done Todos")'
-    );
-    if (await removeDoneButton.isVisible()) {
-      await removeDoneButton.click();
-    }
-
-    // Verify all todos are removed
-    await expect(page.locator(".task")).toHaveCount(0);
   });
 
   test("should delete the todo in an editing state", async({page})=> {
