@@ -75,6 +75,8 @@ test.describe("remove all done todos", () => {
     const removeDoneButton = page.locator(
       'button:has-text("Remove Done Todos")'
     );
+
+    await expect(removeDoneButton).toBeVisible();
     if (await removeDoneButton.isVisible()) {
       await removeDoneButton.click();
     }
