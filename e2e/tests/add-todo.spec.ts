@@ -6,7 +6,7 @@ test.describe("Todo", () => {
     });
 
     test("should add new todo", async({page})=> {
-        const todoText = `Test Todo ${Date.now()}`;
+        const todoText = `Test Todo ${Date.now().toLocaleString()}`;
 
         await page.fill('input[placeholder="Enter your todo...."]', todoText);
         await page.keyboard.press('Enter');
